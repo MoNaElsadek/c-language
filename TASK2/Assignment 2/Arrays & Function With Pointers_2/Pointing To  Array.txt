@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+   
+     int num [10]= {3,4,2,4,5,6,8,33,6};
+    int *prt=num;
+
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", *(prt + i));
+    }
+    printf("\n");
+
+
+    return 0;
+
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int x=0x1234;
+int *ptr=&x;
+printf("%d\n",ptr);
+*ptr++;      // here frist print pointer which point to  memory                           location that has value of x ,Then  increment                      pointer by one, which means it now points to                       the next memory location.
+
+
+
+
+printf("%d\n",ptr);
+*++ptr;            // here first increments the pointer by one,                       which means it now points to the next memory                       location Then print  the value of pointer
+printf("%d\n",ptr);
+++*ptr;                  // here  print the pointer's value at the                       memory location it currently points                             to it. Then, itincrements that value by one
+printf("%d\n",ptr);
+    return 0; 
+}
+
+
