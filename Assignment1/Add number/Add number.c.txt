@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int addNumbers(int *, int *);
+ 
+int main()
+{
+   int fristNum =9,secondNum =4,re;
+   
+   
+   re = addNumbers(&fristNum, &secondNum);
+   printf(" The sum   is %d  ", re);
+   return 0;
+}
+int addNumbers(int *n1, int *n2) 
+{
+   int re;
+   re = *n1 + *n2;
+   return re;
+}
