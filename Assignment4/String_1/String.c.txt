@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+ 
+int main()
+{
+  char x[50];
+ printf("enter string ");
+ scanf("%s",x);
+ printf("%s",x);
+    return 0;
+   
+}

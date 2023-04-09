@@ -1,0 +1,25 @@
+#include <stdio.h>
+    int main()  
+{  
+    char x[50];
+    char y[50];
+    int i ;
+ printf("enter frsit string ");
+ scanf("%s",x);
+ printf("enter second string ");
+ scanf("%s",y); 
+
+  printf("string1 equal string2");
+    
+   while (x[i] == y[i] && x[i] != '\0'){
+      i++;
+   if (x[i] == y[i])
+      printf("str1 equal str2");
+  
+   else
+      printf("str1 not equal str2");
+}
+   return (0);
+}
+     
+    

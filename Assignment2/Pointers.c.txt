@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+ int x=9,y=5,z=3,p=7,q=1,r=6;
+ int *P,*Q,*R;
+  P=&p;
+  Q=&q;
+  R=&r;
+ 
+  printf("%d %d %d %d %d %d\n",x,y,z,p,q,r);
+  printf("%d %d %d \n",*P,*Q,*R);
+  printf("swapping pointers");
+  
+  P=&q;
+  Q=&r;
+  R=&p;
+  printf("%d %d %d %d %d %d\n",x,y,z,p,q,r);
+  printf("%d %d %d \n",*P,*Q,*R);
+    return 0;
+}
+
