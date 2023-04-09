@@ -1,0 +1,23 @@
+#include <stdio.h>
+struct test {
+    int id;
+ char name [20];
+ char class_id ;
+
+};
+struct test1 {
+    char name [20];
+    int id;
+   char class_id ;
+
+};
+
+int main() {
+   
+     struct test test1;
+     printf("Size of test1 struct: %ld bytes\n", sizeof(test1));
+         struct test1 test2;
+     printf("Size of test2 struct: %ld bytes\n", sizeof(test2));
+    return 0;
+}
+ there no deference

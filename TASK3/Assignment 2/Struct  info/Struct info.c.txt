@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+struct info {
+    char name[50];
+    int age;
+};
+
+int main() {
+   
+    struct info obj = {"John", 25};
+
+
+    struct info *obj_ptr;
+
+    
+    obj_ptr = &obj;
+
+    
+    printf("Name: %s\n", obj_ptr->name);
+    printf("Age: %d\n", obj_ptr->age);
+
+    return 0;
+}

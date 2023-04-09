@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+
+struct shops {
+    char name[30];
+    char location[30];
+};
+
+struct product_info {
+    int id;
+    float price;
+    int quantity;
+};
+
+struct category {
+    int id;
+    int products_num;
+};
+
+union database {
+    struct shops s;
+    struct product_info p;
+    struct category c;
+};
+struct database1 {
+    struct shops s;
+    struct product_info p;
+    struct category c;
+};
+
+int main() {
+   
+     union database  test1;
+     printf("Size of test1 union: %ld bytes\n", sizeof(test1));
+      printf("Size of shops struct inside union: %ld bytes\n", sizeof(struct shops));
+    printf("Size of product_info struct inside union: %ld bytes\n", sizeof(struct product_info));
+    printf("Size of category struct inside union: %ld bytes\n\n", sizeof(struct category));
+    struct database1 test2;
+    
+     printf("Size of parent struct: %ld bytes\n", sizeof(test2));
+      printf("Size of shops struct inside parent struct: %ld bytes\n", sizeof(struct shops));
+    printf("Size of product_info struct inside parent struct: %ld bytes\n", sizeof(struct product_info));
+    printf("Size of category struct inside parent struct: %ld bytes\n", sizeof(struct category));
+    //the size of the database struct is larger than the size of the  union due to size of union depened on latest initialized data member , The sizeof for a struct is  equal to the sum of sizeof of each individual member.
+    return 0;
+}

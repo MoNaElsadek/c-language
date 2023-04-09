@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+int main() {
+    char date1[20], date2[20];
+
+
+    printf("Enter the first date in DD/MM/YYYY format: ");
+    scanf("%s", date1);
+    struct Date date_str1;
+    sscanf(date1, "%d/%d/%d", &date_str1.day, &date_str1.month, &date_str1.year);
+
+    printf("Enter the second date in DD/MM/YYYY format: ");
+    scanf("%s", date2);
+
+    struct Date date_str2;
+    sscanf(date2, "%d/%d/%d", &date_str2.day, &date_str2.month, &date_str2.year);
+
+    
+    if (date_str1.day == date_str2.day && date_str1.month == date_str2.month && date_str1.year == date_str2.year) {
+        printf("Dates are equal\n");
+    } else {
+        printf("Dates are not equal\n");
+    }
+
+    return 0;
+}
